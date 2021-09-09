@@ -100,7 +100,7 @@ function buildCharts(sample) {
       mode: "markers",
       marker: {
         size: sample_values,
-        colorscale: "YlGnBu"
+        //colorscale: "YlGnBu"
       }
     }];
 
