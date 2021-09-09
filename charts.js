@@ -52,31 +52,34 @@ function buildMetadata(sample) {
   });
 }
 
-// 1. Create the buildCharts function.
+// Create the buildCharts function.
 function buildCharts(sample) {
-  // 2. Use d3.json to load and retrieve the samples.json file 
+  // Use d3.json to load and retrieve the samples.json file 
   d3.json("samples.json").then((data) => {
-    // 3. Create a variable that holds the samples array. 
+    // Create a variable that holds the samples array. 
     let samples = data.samples;
 
-    // 4. Create a variable that filters the samples for the object with the desired sample number.
+    // Create a variable that filters the samples for the object with the desired sample number.
     let resultArray = samples.filter(sampleObj => sampleObj.id == sample);
 
-    //  5. Create a variable that holds the first sample in the array.
+    // Create a variable that holds the first sample in the array.
     let result = resultArray[0];
 
-    // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
+    // Create a variable that filters the metadata array for the object with the desired sample number.
+    let metadataResult = data.metadata.filter(metadataObj => metadataObj.id == sample)[0];
+
+    // Create variables that hold the otu_ids, otu_labels, and sample_values.
     let otu_ids = result.otu_ids;
     let otu_labels = result.otu_labels;
     let sample_values = result.sample_values;
 
-    // 7. Create the yticks for the bar chart.
-    // Hint: Get the the top 10 otu_ids and map them in descending order  
-    //  so the otu_ids with the most bacteria are last. 
+    // 3. Create a variable that holds the washing frequency.
+    let wfreq = metadataResult.wfreq;
 
+    // Create the yticks for the bar chart.
     var yticks = otu_ids.slice(0, 10).map(id => "OTU " + id).reverse();
 
-    // 8. Create the trace for the bar chart. 
+    // Create the trace for the bar chart. 
     var barData = [{
       x : sample_values.slice(0, 10).reverse(),
       y : yticks,
@@ -84,15 +87,15 @@ function buildCharts(sample) {
       orientation: "h"
     }];
 
-    // 9. Create the layout for the bar chart. 
+    // Create the layout for the bar chart. 
     var barLayout = {
      title : "Top 10 Bacteria Cultures Found"
     };
 
-    // 10. Use Plotly to plot the data with the layout. 
+    // Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", barData, barLayout);
 
-    // 1. Create the trace for the bubble chart.
+    // Create the trace for the bubble chart.
     var bubbleData = [{
       x: otu_ids,
       y: sample_values,
@@ -104,15 +107,41 @@ function buildCharts(sample) {
       }
     }];
 
-    // 2. Create the layout for the bubble chart.
+    // Create the layout for the bubble chart.
     var bubbleLayout = {
       title: "Bacteria Cultures Per Sample",
-      xaxis: {title: "OTU ID"},
-      //margin: {b:3, l:5, r:5, t:3, pad:5},
+      xaxis: { title: "OTU ID" },
       hovermode: "closest"
     };
 
-    // 3. Use Plotly to plot the data with the layout.
-    Plotly.newPlot("bubble", bubbleData, bubbleLayout); 
+    // Use Plotly to plot the data with the layout.
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout);
+
+    // 4. Create the trace for the gauge chart.
+    var gaugeData = [{
+      value: wfreq,
+      title: {text: "Belly Button Washing Frequency"},
+      type: "indicator",
+      mode: "gauge+number",
+      gauge: {
+        axis: { range: [null, 10] },
+        bar: { color: rgba(41, 31, 30, 1.0) },
+        steps: [
+          { range: [0,2], color: rgba(135, 45, 9, 1.0) },
+          { range: [2,4], color: rgba(232, 91, 35, 1.0) },
+          { range: [4,6], color: rgba(255, 209, 43, 1.0) },
+          { range: [6,8], color: rgba(24, 184, 122, 1.0) },
+          { range: [8,10], color: rgba(5, 122, 77, 1.0) },
+        ]
+      }
+    }];
+    
+    // 5. Create the layout for the gauge chart.
+    var gaugeLayout = { 
+     
+    };
+
+    // 6. Use Plotly to plot the gauge data and layout.
+    Plotly.newPlot("gauge", gaugeData, gaugeLayout);
   });
 }
