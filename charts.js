@@ -84,7 +84,8 @@ function buildCharts(sample) {
       x : sample_values.slice(0, 10).reverse(),
       y : yticks,
       type : "bar",
-      orientation: "h"
+      orientation: "h",
+      marker: { color: "rgb(152, 38, 73)" }
     }];
 
     // Create the layout for the bar chart. 
@@ -125,13 +126,13 @@ function buildCharts(sample) {
       mode: "gauge+number",
       gauge: {
         axis: { range: [null, 10] },
-        bar: { color: rgba(41, 31, 30, 1.0) },
+        bar: { color: "rgb(41, 31, 30)" },
         steps: [
-          { range: [0,2], color: rgba(135, 45, 9, 1.0) },
-          { range: [2,4], color: rgba(232, 91, 35, 1.0) },
-          { range: [4,6], color: rgba(255, 209, 43, 1.0) },
-          { range: [6,8], color: rgba(24, 184, 122, 1.0) },
-          { range: [8,10], color: rgba(5, 122, 77, 1.0) },
+          { range: [0,2], color: "rgb(135, 45, 9)" },
+          { range: [2,4], color: "rgb(232, 91, 35)" },
+          { range: [4,6], color: "rgb(255, 209, 43)" },
+          { range: [6,8], color: "rgb(24, 184, 122)" },
+          { range: [8,10], color: "rgb(5, 122, 77)" },
         ]
       }
     }];
