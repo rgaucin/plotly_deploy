@@ -100,7 +100,8 @@ function buildCharts(sample) {
      plot_bgcolor: paper_color,
      font: { color: text_color },
      height: 350,
-     margin: { b: 10, l: 20, t: 10, r: 20, pad: 20}
+     xaxis: { automargin: true },
+     yaxis: { automargin: true }
     };
 
     // Use Plotly to plot the data with the layout. 
