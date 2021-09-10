@@ -94,7 +94,10 @@ function buildCharts(sample) {
 
     // Create the layout for the bar chart. 
     var barLayout = {
-      title: "Top 10 Bacteria Cultures Found",
+      title: {
+        text: "Top 10 Bacteria Cultures Found",
+        font: { family: "Balto"}
+      },
       paper_bgcolor: paper_color,
       plot_bgcolor: paper_color,
       font: { color: text_color },
@@ -127,7 +130,10 @@ function buildCharts(sample) {
 
     // Create the layout for the bubble chart.
     var bubbleLayout = {
-      title: "Bacteria Cultures Per Sample",
+      title: {
+        text: "Bacteria Cultures Per Sample",
+        font: { family: "Balto"}
+      },
       xaxis: {
         title: "OTU ID",
         linecolor: text_color
@@ -170,6 +176,9 @@ function buildCharts(sample) {
       height: 355,
       paper_bgcolor: paper_color,
       font: { color: text_color },
+      title: {
+        font: { family: "Balto" }
+      },
       margin: { autoexpand: true }
     };
 
