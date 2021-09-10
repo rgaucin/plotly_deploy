@@ -84,7 +84,8 @@ function buildCharts(sample) {
     var text_color = "rgb(247, 247, 247)";
 
     // define font for chart titles
-    var chart_title_font = "Open Sans";
+    var chart_title_font = "Helvetica, Arial";
+    var font_size = 24;
 
     // Create the trace for the bar chart. 
     var barData = [{
@@ -99,7 +100,7 @@ function buildCharts(sample) {
     var barLayout = {
       title: {
         text: "Top 10 Bacteria Cultures Found",
-        font: { family: chart_title_font }
+        font: { size: font_size, family: chart_title_font }
       },
       paper_bgcolor: paper_color,
       plot_bgcolor: paper_color,
@@ -135,7 +136,7 @@ function buildCharts(sample) {
     var bubbleLayout = {
       title: {
         text: "Bacteria Cultures Per Sample",
-        font: { family: chart_title_font }
+        font: { size: font_size, family: chart_title_font }
       },
       xaxis: {
         title: "OTU ID",
@@ -158,7 +159,7 @@ function buildCharts(sample) {
     var gaugeData = [{
       title: {
         text: "Belly Button Washing Frequency",
-        font: { family: chart_title_font }
+        font: { size: font_size, family: chart_title_font }
       },
       value: wfreq,
       type: "indicator",
