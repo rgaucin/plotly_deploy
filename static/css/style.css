@@ -21,3 +21,7 @@ select {
     background-color: #222222;
     border-color: #222222;
 }
+
+.chart {
+    margin: auto;
+}
