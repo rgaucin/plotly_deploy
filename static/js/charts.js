@@ -101,9 +101,7 @@ function buildCharts(sample) {
       height: 355,
       width: 400,
       xaxis: {
-        linecolor: text_color
-      },
-      yaxis: {
+        linecolor: text_color,
         title: "Sample Values"
       },
       margin: {r: 20}
