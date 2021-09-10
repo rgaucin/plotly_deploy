@@ -166,7 +166,7 @@ function buildCharts(sample) {
     
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
-      width: 400,
+      // width: 400,
       height: 355,
       paper_bgcolor: paper_color,
       font: { color: text_color },
