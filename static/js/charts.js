@@ -96,10 +96,11 @@ function buildCharts(sample) {
 
     // Create the layout for the bar chart. 
     var barLayout = {
-     title : "Top 10 Bacteria Cultures Found",
+     title: "Top 10 Bacteria Cultures Found",
      paper_bgcolor: paper_color,
      plot_bgcolor: paper_color,
-     font: { color: text_color }
+     font: { color: text_color },
+     margin: { b: 0, l: 0, r: 0, t: 0 }
     };
 
     // Use Plotly to plot the data with the layout. 
