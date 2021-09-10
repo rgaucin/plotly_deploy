@@ -97,6 +97,7 @@ function buildCharts(sample) {
     var barLayout = {
      title : "Top 10 Bacteria Cultures Found",
      paper_bgcolor: paper_color,
+     plot_bgcolor: "rgb(247, 247, 247, 0.38)",
      font: { color: text_color }
     };
 
@@ -152,7 +153,6 @@ function buildCharts(sample) {
       width: 450,
       height: 375,
       paper_bgcolor: paper_color,
-      plot_bgcolor: "rgb(247, 247, 247, 0.38)",
       font: { color: text_color }
     };
 
