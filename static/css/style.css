@@ -19,7 +19,14 @@ select {
 
 .well {
     background-color: #222222;
-    border-color: #222222;
+}
+
+.well-bar {
+    border-color: #f26f6f;
+}
+
+.well-gauge {
+    border-color: #32cf92;
 }
 
 .chart {

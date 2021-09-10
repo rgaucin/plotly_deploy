@@ -117,7 +117,7 @@ function buildCharts(sample) {
       mode: "markers",
       marker: {
         size: sample_values,
-        color: otu_ids
+        color: Array.from(otu_ids, id => `rgb(0, 0, ${id})`)
       }
     }];
 
@@ -125,6 +125,7 @@ function buildCharts(sample) {
     var bubbleLayout = {
       title: "Bacteria Cultures Per Sample",
       xaxis: { title: "OTU ID" },
+      yaxis: { title: "Sample Values" },
       paper_bgcolor: paper_color,
       plot_bgcolor: paper_color,
       hovermode: "closest",
@@ -146,8 +147,8 @@ function buildCharts(sample) {
         steps: [
           { range: [0,2], color: "rgb(135, 45, 9)" },
           { range: [2,4], color: "rgb(232, 91, 35)" },
-          { range: [4,6], color: "rgb(255, 209, 43)" },
-          { range: [6,8], color: "rgb(24, 184, 122)" },
+          { range: [4,6], color: "rgb(255, 220, 94)" },
+          { range: [6,8], color: "rgb(50, 207, 146)" },
           { range: [8,10], color: "rgb(5, 122, 77)" },
         ]
       }
@@ -159,7 +160,7 @@ function buildCharts(sample) {
       height: 355,
       paper_bgcolor: paper_color,
       font: { color: text_color },
-      margin: { b: 10, l: 70, t: 10, r: 40 }
+      margin: { b: 10, l: 70, t: 10, r: 50 }
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
