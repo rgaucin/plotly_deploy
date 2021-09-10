@@ -29,6 +29,10 @@ select {
     border-color: #32cf92;
 }
 
+.well-bubble {
+    border-color: #63d2ff
+}
+
 .chart {
     margin: auto;
 }

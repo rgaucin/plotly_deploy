@@ -82,7 +82,6 @@ function buildCharts(sample) {
     // define colors for graph layouts
     var paper_color = "rgb(34, 34, 34)";
     var text_color = "rgb(247, 247, 247)";
-    var grid_color = "rgb(247, 247, 247)"
 
     // Create the trace for the bar chart. 
     var barData = [{
@@ -109,6 +108,9 @@ function buildCharts(sample) {
     // Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", barData, barLayout);
 
+    // max OTU id
+    var max_id = Math.max(...otu_ids);
+
     // Create the trace for the bubble chart.
     var bubbleData = [{
       x: otu_ids,
@@ -117,7 +119,7 @@ function buildCharts(sample) {
       mode: "markers",
       marker: {
         size: sample_values,
-        color: Array.from(otu_ids, id => `rgb(0, 0, ${id})`)
+        color: Array.from(otu_ids, id => `rgb(0, 0, ${id/max_id*255})`)
       }
     }];
 
@@ -143,13 +145,13 @@ function buildCharts(sample) {
       mode: "gauge+number",
       gauge: {
         axis: { range: [null, 10], dtick: 2 },
-        bar: { color: "rgb(41, 31, 30)" },
+        bar: { color: "rgb(21, 21, 21)" },
         steps: [
-          { range: [0,2], color: "rgb(135, 45, 9)" },
-          { range: [2,4], color: "rgb(232, 91, 35)" },
-          { range: [4,6], color: "rgb(255, 220, 94)" },
-          { range: [6,8], color: "rgb(50, 207, 146)" },
-          { range: [8,10], color: "rgb(5, 122, 77)" },
+          { range: [0,2], color: "rgb(168, 230, 206)" },
+          { range: [2,4], color: "rgb(72, 250, 182)" },
+          { range: [4,6], color: "rgb(50, 207, 146)" },
+          { range: [6,8], color: "rgb(54, 156, 117)" },
+          { range: [8,10], color: "rgb(55, 110, 89)" },
         ]
       }
     }];
