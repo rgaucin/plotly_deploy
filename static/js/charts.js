@@ -91,7 +91,7 @@ function buildCharts(sample) {
       type : "bar",
       orientation: "h",
       height: 400,
-      marker: { color: "rgb(152, 38, 73)" }
+      marker: { color: "rgb(242, 111, 111)" }
     }];
 
     // Create the layout for the bar chart. 
