@@ -97,7 +97,7 @@ function buildCharts(sample) {
     var barLayout = {
      title : "Top 10 Bacteria Cultures Found",
      paper_bgcolor: paper_color,
-     plot_bgcolor: "rgb(247, 247, 247, 0.38)",
+     plot_bgcolor: paper_color,
      font: { color: text_color }
     };
 
@@ -121,7 +121,7 @@ function buildCharts(sample) {
       title: "Bacteria Cultures Per Sample",
       xaxis: { title: "OTU ID" },
       paper_bgcolor: paper_color,
-      plot_bgcolor: "rgb(247, 247, 247, 0.38)",
+      plot_bgcolor: paper_color,
       hovermode: "closest",
       font: { color: text_color }
     };
