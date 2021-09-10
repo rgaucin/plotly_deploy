@@ -90,7 +90,6 @@ function buildCharts(sample) {
       y : yticks,
       type : "bar",
       orientation: "h",
-      height: 400,
       marker: { color: "rgb(242, 111, 111)" }
     }];
 
@@ -100,7 +99,7 @@ function buildCharts(sample) {
      paper_bgcolor: paper_color,
      plot_bgcolor: paper_color,
      font: { color: text_color },
-     margin: { b: 0, l: 0, r: 0, t: 0 }
+     height: 400
     };
 
     // Use Plotly to plot the data with the layout. 
