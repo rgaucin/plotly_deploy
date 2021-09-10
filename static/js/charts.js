@@ -127,6 +127,7 @@ function buildCharts(sample) {
       gauge: {
         axis: { range: [null, 10], dtick: 2 },
         bar: { color: "rgb(41, 31, 30)" },
+        paper_bgcolor: rgb(50, 50, 50),
         steps: [
           { range: [0,2], color: "rgb(135, 45, 9)" },
           { range: [2,4], color: "rgb(232, 91, 35)" },
