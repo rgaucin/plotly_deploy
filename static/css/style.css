@@ -1,6 +1,5 @@
 body {
     color: #f7f7f7;
-    background-image: url("../images/bacteria-header.jpeg");
 }
 
 select {
@@ -11,6 +10,7 @@ select {
 .jumbotron {
     background-color: #222222;
     text-align: center;
+    background-image: url("../images/bacteria-header.jpeg");
 }
 
 .panel {
