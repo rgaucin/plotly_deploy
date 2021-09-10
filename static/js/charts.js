@@ -87,6 +87,9 @@ function buildCharts(sample) {
     var chart_title_font = "Helvetica, Arial";
     var font_size = 24;
 
+    // create variable to set chart responsiveness
+    var config = { responsive: true };
+
     // Create the trace for the bar chart. 
     var barData = [{
       x : sample_values.slice(0, 10).reverse(),
@@ -115,7 +118,7 @@ function buildCharts(sample) {
     };
 
     // Use Plotly to plot the data with the layout. 
-    Plotly.newPlot("bar", barData, barLayout);
+    Plotly.newPlot("bar", barData, barLayout, config);
 
     // max OTU id
     var max_id = Math.max(...otu_ids);
@@ -153,7 +156,7 @@ function buildCharts(sample) {
     };
 
     // Use Plotly to plot the data with the layout.
-    Plotly.newPlot("bubble", bubbleData, bubbleLayout);
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout, config);
 
     // 4. Create the trace for the gauge chart.
     var gaugeData = [{
@@ -187,6 +190,6 @@ function buildCharts(sample) {
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
-    Plotly.newPlot("gauge", gaugeData, gaugeLayout);
+    Plotly.newPlot("gauge", gaugeData, gaugeLayout, config);
   });
 }
