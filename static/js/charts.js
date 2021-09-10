@@ -179,7 +179,7 @@ function buildCharts(sample) {
       paper_bgcolor: paper_color,
       font: { color: text_color },
       title: {
-        title: { text: "Belly Button Washing Frequency" },
+        text: "Belly Button Washing Frequency",
         font: { family: chart_title_font }
       },
       margin: { autoexpand: true }
