@@ -156,6 +156,10 @@ function buildCharts(sample) {
 
     // 4. Create the trace for the gauge chart.
     var gaugeData = [{
+      title: {
+        text: "Belly Button Washing Frequency",
+        font: { family: chart_title_font }
+      },
       value: wfreq,
       type: "indicator",
       mode: "gauge+number",
@@ -178,10 +182,6 @@ function buildCharts(sample) {
       height: 355,
       paper_bgcolor: paper_color,
       font: { color: text_color },
-      title: {
-        text: "Belly Button Washing Frequency",
-        font: { family: chart_title_font }
-      },
       margin: { autoexpand: true }
     };
 
