@@ -100,7 +100,7 @@ function buildCharts(sample) {
      plot_bgcolor: paper_color,
      font: { color: text_color },
      height: 350,
-     width: 350,
+     width: 400,
      xaxis: { automargin: true },
      yaxis: { automargin: true }
     };
