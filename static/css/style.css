@@ -1,8 +1,11 @@
 body {
-
     color: #f7f7f7;
     background-color: #121212;
+}
 
+select {
+    color: #121212;
+    background-color: #f7f7f7;
 }
 
 .jumbotron {

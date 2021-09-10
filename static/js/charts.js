@@ -89,6 +89,7 @@ function buildCharts(sample) {
       y : yticks,
       type : "bar",
       orientation: "h",
+      height: 400,
       marker: { color: "rgb(152, 38, 73)" }
     }];
 
