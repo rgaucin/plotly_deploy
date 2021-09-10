@@ -17,8 +17,14 @@ select {
     background-color: #222222;
 }
 
+.panel-heading {
+    background-color: #f7f7f7;
+    color: #222222;
+}
+
 .well {
     background-color: #222222;
+    border-color: #f7f7f7;
 }
 
 .well-bar {
