@@ -99,7 +99,8 @@ function buildCharts(sample) {
      paper_bgcolor: paper_color,
      plot_bgcolor: paper_color,
      font: { color: text_color },
-     height: 350
+     height: 350,
+     margin: { b: 10, t: 10}
     };
 
     // Use Plotly to plot the data with the layout. 
@@ -152,9 +153,10 @@ function buildCharts(sample) {
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
       width: 400,
-      height: 375,
+      height: 350,
       paper_bgcolor: paper_color,
-      font: { color: text_color }
+      font: { color: text_color },
+      margin: { b: 10, l: 5, t: 10, r: 10 }
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
