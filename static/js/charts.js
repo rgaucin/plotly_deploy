@@ -101,9 +101,9 @@ function buildCharts(sample) {
      font: { color: text_color },
      height: 355,
      width: 400,
-     xaxis: { automargin: true },
-     yaxis: { automargin: true },
-     margin: {r: 40}
+    //  xaxis: { automargin: true },
+    //  yaxis: { automargin: true },
+    //  margin: {r: 40}
     };
 
     // Use Plotly to plot the data with the layout. 
@@ -159,7 +159,7 @@ function buildCharts(sample) {
       height: 355,
       paper_bgcolor: paper_color,
       font: { color: text_color },
-      margin: { b: 10, l: 15, t: 10, r: 30 }
+      // margin: { b: 10, l: 15, t: 10, r: 30 }
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
