@@ -100,8 +100,10 @@ function buildCharts(sample) {
      font: { color: text_color },
      height: 355,
      width: 400,
-    //  xaxis: { automargin: true },
-    //  yaxis: { automargin: true },
+    yaxis: {
+      title: "Sample Values",
+      gridcolor: text_color
+    },
     margin: {r: 20}
     };
 
@@ -126,8 +128,14 @@ function buildCharts(sample) {
     // Create the layout for the bubble chart.
     var bubbleLayout = {
       title: "Bacteria Cultures Per Sample",
-      xaxis: { title: "OTU ID" },
-      yaxis: { title: "Sample Values" },
+      xaxis: {
+        title: "OTU ID",
+        gridcolor: text_color
+      },
+      yaxis: {
+        title: "Sample Values",
+        gridcolor: text_color
+      },
       paper_bgcolor: paper_color,
       plot_bgcolor: paper_color,
       hovermode: "closest",
