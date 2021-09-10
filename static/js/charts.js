@@ -80,8 +80,9 @@ function buildCharts(sample) {
     var yticks = otu_ids.slice(0, 10).map(id => "OTU " + id).reverse();
 
     // define colors for graph layouts
-    var paper_color = "rgb(50, 50, 50)";
+    var paper_color = "rgb(53, 53, 64)";
     var text_color = "rgb(247, 247, 247)";
+    var grid_color = "rgb(247, 247, 247)"
 
     // Create the trace for the bar chart. 
     var barData = [{
