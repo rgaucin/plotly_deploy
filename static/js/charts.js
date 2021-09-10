@@ -100,6 +100,7 @@ function buildCharts(sample) {
      plot_bgcolor: paper_color,
      font: { color: text_color },
      height: 350,
+     width: 350,
      xaxis: { automargin: true },
      yaxis: { automargin: true }
     };
@@ -153,7 +154,7 @@ function buildCharts(sample) {
     
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
-      width: 400,
+      width: 350,
       height: 350,
       paper_bgcolor: paper_color,
       font: { color: text_color },
