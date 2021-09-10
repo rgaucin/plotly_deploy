@@ -1,6 +1,6 @@
 body {
     color: #f7f7f7;
-    background-color: #222232;
+    background-color: #151520;
 }
 
 select {
@@ -9,14 +9,14 @@ select {
 }
 
 .jumbotron {
-    background-color: #353540;
+    background-color: #222222;
     text-align: center;
 }
 
 .panel {
-    background-color: #353540;
+    background-color: #222222;
 }
 
 .well {
-    background-color: #353540;
+    background-color: #222222;
 }
