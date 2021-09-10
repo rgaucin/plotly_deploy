@@ -159,7 +159,7 @@ function buildCharts(sample) {
       height: 355,
       paper_bgcolor: paper_color,
       font: { color: text_color },
-      margin: { b: 10, l: 70, t: 10, r: 25 }
+      margin: { b: 10, l: 70, t: 10, r: 30 }
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
