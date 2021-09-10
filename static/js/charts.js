@@ -103,7 +103,7 @@ function buildCharts(sample) {
      width: 400,
     //  xaxis: { automargin: true },
     //  yaxis: { automargin: true },
-    //  margin: {r: 40}
+    margin: {r: 30}
     };
 
     // Use Plotly to plot the data with the layout. 
