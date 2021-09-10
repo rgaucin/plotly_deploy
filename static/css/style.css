@@ -1,6 +1,6 @@
 body {
     color: #f7f7f7;
-    background-color: #151520;
+    background-color: #151515;
 }
 
 select {
@@ -19,4 +19,5 @@ select {
 
 .well {
     background-color: #222222;
+    border-color: #222222;
 }
