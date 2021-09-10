@@ -119,7 +119,7 @@ function buildCharts(sample) {
       mode: "markers",
       marker: {
         size: sample_values,
-        color: Array.from(otu_ids, id => `rgb(150, ${(id/max_id*60)+80}, 200)`).reverse()
+        color: Array.from(otu_ids.sort((a,b) => b - a), id => `rgb(150, ${(id/max_id*60)+80}, 200)`)
       }
     }];
 
