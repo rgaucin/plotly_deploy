@@ -79,7 +79,9 @@ function buildCharts(sample) {
     // Create the yticks for the bar chart.
     var yticks = otu_ids.slice(0, 10).map(id => "OTU " + id).reverse();
 
+    // define colors for graph layouts
     var paper_color = "rgb(50, 50, 50)";
+    var text_color = "rgb(247, 247, 247)";
 
     // Create the trace for the bar chart. 
     var barData = [{
@@ -93,7 +95,8 @@ function buildCharts(sample) {
     // Create the layout for the bar chart. 
     var barLayout = {
      title : "Top 10 Bacteria Cultures Found",
-     paper_bgcolor: paper_color
+     paper_bgcolor: paper_color,
+     font: { color: text_color }
     };
 
     // Use Plotly to plot the data with the layout. 
@@ -116,7 +119,8 @@ function buildCharts(sample) {
       title: "Bacteria Cultures Per Sample",
       xaxis: { title: "OTU ID" },
       paper_bgcolor: paper_color,
-      hovermode: "closest"
+      hovermode: "closest",
+      font: { color: text_color }
     };
 
     // Use Plotly to plot the data with the layout.
@@ -143,7 +147,10 @@ function buildCharts(sample) {
     
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
-      width: 450, height: 375, paper_bgcolor: paper_color
+      width: 450,
+      height: 375,
+      paper_bgcolor: paper_color,
+      font: { color: text_color }
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
