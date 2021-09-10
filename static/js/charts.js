@@ -99,7 +99,7 @@ function buildCharts(sample) {
       plot_bgcolor: paper_color,
       font: { color: text_color },
       height: 355,
-      width: 400,
+      width: 420,
       xaxis: {
         linecolor: text_color,
         title: "Sample Values"
