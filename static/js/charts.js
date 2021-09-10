@@ -120,7 +120,7 @@ function buildCharts(sample) {
       title: "Bacteria Cultures Per Sample",
       xaxis: { title: "OTU ID" },
       paper_bgcolor: paper_color,
-      plot_color: "rgb(247, 247, 247, 0.38)",
+      plot_bgcolor: "rgb(247, 247, 247, 0.38)",
       hovermode: "closest",
       font: { color: text_color }
     };
@@ -152,7 +152,7 @@ function buildCharts(sample) {
       width: 450,
       height: 375,
       paper_bgcolor: paper_color,
-      plot_color: "rgb(247, 247, 247, 0.38)",
+      plot_bgcolor: "rgb(247, 247, 247, 0.38)",
       font: { color: text_color }
     };
 
